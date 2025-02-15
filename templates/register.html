@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!-- Link to Font Awesome for icons (optional, for form icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+     /* Centered form container with styling */
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+         /* Input field styling */
+        input[type="text"], input[type="password"], input[type="email"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+         /* Hover effect for submit button */
+        input[type="submit"]:hover {
+            background-color: #ff3d2e;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon margin adjustment */
+        .fas {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Centered content container for the registration form -->
+    <div class="container">
+        <h1>Register</h1>
+        <form method="POST" action="/register">
+            <label for="username"><i class="fas fa-user"></i> Username:</label>
+            <input type="text" name="username" required>
+
+            <label for="password"><i class="fas fa-lock"></i> Password:</label>
+            <input type="password" name="password" required>
+
+            <label for="confirm_password"><i class="fas fa-lock"></i> Confirm Password:</label>
+            <input type="password" name="confirm_password" required>
+
+            <label for="firstName"><i class="fas fa-id-card"></i> First Name:</label>
+            <input type="text" name="firstName" required>
+
+            <label for="lastName"><i class="fas fa-id-card-alt"></i> Last Name:</label>
+            <input type="text" name="lastName" required>
+
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" name="email" required>
+
+            <label for="phone"><i class="fas fa-phone"></i> Phone:</label>
+            <input type="text" name="phone" required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Search Results</title>
+</head>
+<body>
+    <h1>Rental Search Results</h1>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Feature</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        {% for rental in rentals %}
+        <tr>
+            <td>{{ rental[1] }}</td>
+            <td>{{ rental[2] }}</td>
+            <td>{{ rental[3] }}</td>
+            <td>{{ rental[4] }}</td>
+            <td><a href="{{ url_for('add_review', rental_id=rental[0]) }}">Write Review</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

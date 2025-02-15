@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Review</title>
+</head>
+<body>
+    <h1>Add a Review</h1>
+    <form action="/add_review/{{ rental_id }}" method="POST">
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="fair">Fair</option>
+            <option value="poor">Poor</option>
+        </select><br><br>
+
+        <label for="description">Review Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <input type="submit" value="Submit Review">
+    </form>
+</body>
+</html>

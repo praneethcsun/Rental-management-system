@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Expensive Rentals</title>
+</head>
+<body>
+    <h1>Most Expensive Rentals by Feature</h1>
+    <table border="1">
+        <tr>
+            <th>Feature</th>
+            <th>Max Price</th>
+        </tr>
+        {% for rental in rentals %}
+        <tr>
+            <td>{{ rental[0] }}</td>
+            <td>${{ rental[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

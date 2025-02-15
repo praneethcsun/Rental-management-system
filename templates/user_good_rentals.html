@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Good Rentals</title>
+</head>
+<body>
+    <h1>Search User Rentals with Only "Excellent" or "Good" Reviews</h1>
+    <form method="POST" action="/user_good_rentals">
+        <label>User ID:</label>
+        <input type="text" name="user_id" required><br>
+        <input type="submit" value="Search">
+    </form>
+    {% if rentals %}
+    <h2>Results:</h2>
+    <table border="1">
+        <tr>
+            <th>Rental ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Feature</th>
+            <th>Price</th>
+        </tr>
+        {% for rental in rentals %}
+        <tr>
+            <td>{{ rental[0] }}</td>
+            <td>{{ rental[2] }}</td>
+            <td>{{ rental[3] }}</td>
+            <td>{{ rental[4] }}</td>
+            <td>{{ rental[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

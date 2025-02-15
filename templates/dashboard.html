@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #1e90ff;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .action-links, .rental-actions, .advanced-actions {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px 5px;
+            color: white;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #3a7bd5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ firstName }} {{ lastName }}!</h1>
+        <p>Username: {{ username }}</p>
+        <p>Email: {{ email }}</p>
+        <p>Phone: {{ phone }}</p>
+        
+        <div class="action-links">
+            <a href="/change_password">Change Password</a> |
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="rental-actions">
+            <h2>Rental Management</h2>
+            <a href="/add_rental" class="button">Add Rental Property</a>
+            <a href="/search_rentals" class="button">Search Rental Properties</a>
+        </div>
+
+        <div class="advanced-actions">
+            <h2>Rental Queries</h2>
+            <a href="/most_expensive_rentals" class="button">Most Expensive Rentals</a>
+            <a href="/search_users_by_features" class="button">Users with Specific Features</a>
+            <a href="/user_good_rentals" class="button">User Rentals with Good/Excellent Reviews</a>
+            <a href="/top_posters_by_date" class="button">Top Posters by Date</a>
+            <a href="/users_with_only_poor_reviews" class="button">Users with Only Poor Reviews</a>
+            <a href="/users_with_no_poor_reviews" class="button">Users with No Poor Reviews</a> 
+        </div>
+    </div>
+</body>
+</html>

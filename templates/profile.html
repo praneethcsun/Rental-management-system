@@ -1,0 +1,30 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+</head>
+<body>
+     <!-- Main heading for the profile update page -->
+    <h1>Update Profile</h1>
+
+    <!-- Form for updating the user profile, sends data using POST method -->
+    <form method="POST" action="/profile">
+        <label>First Name:</label>
+        <input type="text" name="firstName" value="{{ firstName }}" required><br>
+
+        <label>Last Name:</label>
+        <input type="text" name="lastName" value="{{ lastName }}" required><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ email }}" required><br>
+
+        <label>Phone:</label>
+        <input type="text" name="phone" value="{{ phone }}" required><br>
+
+        <input type="submit" value="Update Profile">
+    </form>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App Home</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /*Overall body styling with background gradient */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+    /*styling for floating bubble animations*/
+        .bubble {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            bottom: -100px;
+            animation: bubble 20s infinite;
+        }
+
+        /* Keyframes to animate the bubbles upwards */
+        @keyframes bubble {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-110vh);
+            }
+        }
+
+        /* Bubble position and size variation */
+        .bubble:nth-child(1) {
+            left: 10%;
+            width: 80px;
+            height: 80px;
+            animation-duration: 20s;
+        }
+
+        .bubble:nth-child(2) {
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            animation-duration: 15s;
+            animation-delay: 5s;
+        }
+
+        .bubble:nth-child(3) {
+            left: 70%;
+            width: 50px;
+            height: 50px;
+            animation-duration: 25s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(4) {
+            left: 90%;
+            width: 100px;
+            height: 100px;
+            animation-duration: 18s;
+            animation-delay: 3s;
+        }
+
+        /* Styling for the container that holds the content */
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 350px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Styling for the heading with animation */
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            animation: bounce 1.5s infinite;
+        }
+
+        /* Keyframes to create bounce effect for heading */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+         /* Styling for the buttons (Register and Login) */
+        a {
+            display: inline-block;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background-color: #ff6f61;
+            padding: 15px 30px;
+            border-radius: 30px;
+            margin: 0 10px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        /* Adding space for icons next to text in buttons */
+        a i {
+            margin-right: 8px;
+        }
+
+        /* Hover effect for buttons */
+        a:hover {
+            background-color: #ff3d2e;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+         /* Container for buttons to create space between them */
+        .btn-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating animated bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <!-- Centered content container -->
+    <div class="container">
+        <h1>User Management</h1>
+        <div class="btn-container">
+            <a href="/register"><i class="fas fa-user-plus"></i> Register</a>
+            <a href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+    </div>
+
+</body>
+</html>
